@@ -1,0 +1,82 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 0 1rem;
+}
+
+.form-control input {
+  outline: none;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.5rem;
+  padding: .5rem;
+  border: 1px solid #cacaca;
+  border-radius: 0;
+  background-color: #fefefe;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #0a0a0a;
+}
+
+.form-control label {
+  display: block;
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #555;
+}
+
+.form-control input:focus {
+  border-color: #008FEF;
+}
+
+.form-control input:focus + label {
+  color: #008FEF;
+}
+
+button {
+  border: none;
+  background: #008FEF;
+  color: white;
+  height: 2.5rem;
+  padding: .5rem;
+  width: 300px;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  margin: 0 0 1rem;
+}
+
+button:hover {
+  background: #007bd2;
+}
+
+button:active {
+  background: #0077cb;
+}
+
+.footer {
+  font-size: 1em;
+  text-align: center;
+}
+
+.footer a {
+  color: #007bd2;
+  text-decoration: none;
+}

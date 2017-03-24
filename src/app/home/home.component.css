@@ -1,0 +1,146 @@
+:host {
+  display: block;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.profile-input {
+  display: none;
+}
+
+.profile-label {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-image {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-name {
+  color: #777;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 150px;
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 16px;
+  width: 250px;
+  flex-direction: row;
+  background-color: #fff;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.profile-menu-image {
+  height: 56px;
+  width: 56px;
+  margin: 16px 16px 16px 0;
+  border-radius: 50%;
+}
+
+.profile-menu-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-menu-name {
+  color: #777;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.profile-menu-link {
+  font-size: 15px;
+  color: #007bd2;
+  text-decoration: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.profile-menu-link:hover {
+  text-decoration: underline;
+}
+
+.profile-input:checked ~ .profile-label ~ .profile-menu {
+  display: flex;
+}
+
+.profile-backdrop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  max-width: 75rem;
+  padding-right: .625rem;
+  padding-left: .625rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-block {
+}
+
+.notes-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.notes-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #777;
+  margin-left: 12px;
+}
+
+@media (max-width: 960px) {
+  .note-row {
+    flex-direction: column;
+  }
+}

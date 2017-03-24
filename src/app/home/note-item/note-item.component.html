@@ -1,0 +1,7 @@
+<div class="note-item">
+  <i class="mdi mdi-pin note-pin"
+     [class.active]="note.pinned"
+     [title]="note.pinned ? 'Unpin Note' : 'Pin Note'"
+     (click)="togglePin()"></i>
+  <div class="note-text">{{note.text}}</div>
+</div>

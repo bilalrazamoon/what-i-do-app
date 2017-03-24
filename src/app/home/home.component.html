@@ -1,0 +1,42 @@
+<div class="header">
+  <div class="profile" *ngIf="user">
+    <input class="profile-input" type="checkbox" id="toggle" [(ngModel)]="profileMenu">
+    <label class="profile-label" for="toggle">
+      <img class="profile-image" [src]="user.image" alt="Profile Image">
+      <span class="profile-name">{{user.name}}</span>
+    </label>
+    <div class="profile-menu" *ngIf="user">
+      <img class="profile-menu-image" [src]="user.image" alt="Profile Image">
+      <div class="profile-menu-text">
+        <div class="profile-menu-name">{{user.name}}</div>
+        <a class="profile-menu-link" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="body">
+  <app-note-create (onDone)="createNote($event)"></app-note-create>
+  <div class="notes-container">
+    <div class="notes-block" *ngIf="!isPinNotes()">
+      <div class="notes-row">
+        <app-note-item *ngFor="let note of notes" [note]="note" (onPin)="pinNote($event)"
+                       (onUnPin)="unPinNote($event)"></app-note-item>
+      </div>
+    </div>
+    <div class="notes-block" *ngIf="isPinNotes()">
+      <div class="notes-heading">Pinned</div>
+      <div class="notes-row">
+        <app-note-item *ngFor="let note of pinnedNotes" [note]="note" (onPin)="pinNote($event)"
+                       (onUnPin)="unPinNote($event)"></app-note-item>
+      </div>
+    </div>
+    <div class="notes-block" *ngIf="isPinNotes()">
+      <div class="notes-heading" *ngIf="isPinNotes()">Others</div>
+      <div class="notes-row">
+        <app-note-item *ngFor="let note of otherNotes" [note]="note" (onPin)="pinNote($event)"
+                       (onUnPin)="unPinNote($event)"></app-note-item>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="profile-backdrop" *ngIf="profileMenu" (click)="hideProfileMenu()"></div>
