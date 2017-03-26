@@ -1,5 +1,7 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .note-item {
@@ -23,20 +25,21 @@
   top: 0;
   right: 0;
   padding: 8px;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
-.note-pin:not(.active) {
-  display: none;
-}
-
-.note-item:hover .note-pin {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
   display: block;
+  fill: #555555;
+}
+
+.note-pin svg {
+  width: inherit;
+  height: inherit;
+  fill: inherit;
 }
 
 .note-pin.active {
-  color: #4285f4;
+  fill: #4285f4;
 }
 
 .note-text {

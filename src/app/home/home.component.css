@@ -123,6 +123,8 @@
 }
 
 .notes-block {
+  display: flex;
+  flex-direction: column;
 }
 
 .notes-row {
@@ -137,10 +139,4 @@
   font-weight: 600;
   color: #777;
   margin-left: 12px;
-}
-
-@media (max-width: 960px) {
-  .note-row {
-    flex-direction: column;
-  }
 }
