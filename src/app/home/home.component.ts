@@ -40,6 +40,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.user$ = this.af.database.object(`/users/${this.uid}`);
     this.notes$ = this.af.database.list('/notes', {
       query: {
+        orderByChild: 'created_by',
+        equalTo: this.uid,
         limitToLast: 50
       }
     });
